@@ -18,3 +18,10 @@
     height: 50px;
     width: 50px;
 }
+
+.buttons {
+    padding-top: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
