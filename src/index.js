@@ -13,4 +13,18 @@ let calcDisplay = '0';
         })
     }
 
+    
 })(); // end of self-executing function ()
+
+function changeCalc (keyValue) {
+    let currentVal = document.getElementById('visableNums');
+    console.log(currentVal.innerText);
+    if (currentVal.innerText == 0){
+        currentVal.innerText = '';
+    }
+    switch(keyValue){
+        case (1):
+            currentVal.innerText += 1;
+            break;
+    }
+}
