@@ -1,4 +1,5 @@
 const numbersArray = [];
+let calcDisplay = '0';
 
 (function () {
     // get a Node list of all of the buttons
