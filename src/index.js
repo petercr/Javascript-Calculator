@@ -1,4 +1,4 @@
-const numbersArray = [];
+const numbersArray = []; // GLOBAL Array to hold the values for the calculations
 let calcDisplay = '0';
 
 (function () {
@@ -16,6 +16,7 @@ let calcDisplay = '0';
 
 })(); // end of self-executing function ()
 
+// function to add the number or sign && new line to the display
 function changeCalc(keyValue) {
     let currentVal = document.getElementById('visibleNums');
     console.log(currentVal.innerText);
@@ -71,8 +72,16 @@ function changeCalc(keyValue) {
     }
 }
 
+// function to set the display back to zero 
 function startOver() {
     let currentDisplay = document.getElementById('visibleNums');
     currentDisplay.innerHTML = '0';
-    console.log('test');
+    
+}
+
+function doTheMath(){
+    let currentDisplay = document.getElementById('visibleNums');
+    let temp = eval(currentDisplay.innerText);
+    // loop through the string and use RegEx to push whole values plus signs to numbersArray
+    currentDisplay.innerHTML += `<hr> ${temp} <br>`
 }
