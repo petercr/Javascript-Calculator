@@ -17,7 +17,7 @@ let calcDisplay = '0';
 })(); // end of self-executing function ()
 
 function changeCalc(keyValue) {
-    let currentVal = document.getElementById('visableNums');
+    let currentVal = document.getElementById('visibleNums');
     console.log(currentVal.innerText);
     if (currentVal.innerText == 0) {
         currentVal.innerText = '';
@@ -53,6 +53,9 @@ function changeCalc(keyValue) {
         case (0):
             currentVal.innerText += 0;
             break;
+        case ('.'):
+            currentVal.innerText += '.';
+            break;
         case ('+'):
             currentVal.innerText += ' + \ \n';
             break;
@@ -66,4 +69,10 @@ function changeCalc(keyValue) {
             currentVal.innerText += ' - \ \n';
             break;
     }
+}
+
+function startOver() {
+    let currentDisplay = document.getElementById('visibleNums');
+    currentDisplay.innerHTML = '0';
+    console.log('test');
 }
