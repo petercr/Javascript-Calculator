@@ -15,11 +15,11 @@
     <div class="grid">
         <div class="calculator">
             <div class="display" id="screen">
-                <h1 id="visableNums">0</h1>
+                <h1 id="visibleNums">0</h1>
             </div>
 
             <div class="buttons" id="firstRow">
-                <button class=".btn" id="clearAll">AC</button>
+                <button class=".btn" id="clearAll" onclick="startOver()">AC</button>
                 <button class=".btn" id="backspace">=></button>
                 <button class=".btn" id="history" >History</button>
                 <button class=".btn" id="divide" onclick="changeCalc('/')">/</button>
@@ -38,46 +38,14 @@
                 <button class=".btn" id="minus" onclick="changeCalc('-')" >-</button>
                 <button class=".btn" id="invertValue" >+ -</button>
                 <button class=".btn" id="0" onclick="changeCalc(0)" >0</button>
-                <button class=".btn" id="decimalPlace" >.</button>
+                <button class=".btn" id="decimalPlace" onclick="changeCalc('.')" >.</button>
                 <button class=".btn" id="equalButton" >=</button>
 
 
 
-            </div>
-
-            <!-- <div class="buttons" id="secondRow">
-                <button class=".btn">7</button>
-                <button class=".btn">8</button>
-                <button class=".btn">9</button>
-                <button class=".btn">*</button>
-
-            </div> -->
-
-            <!-- <div class="buttons" id="thirdRow">
-                <button class=".btn">4</button>
-                <button class=".btn">5</button>
-                <button class=".btn">6</button>
-                <button class=".btn">+</button>
-
-            </div> -->
-
-            <!-- <div class="buttons" id="fourthRow">
-                <button class=".btn">1</button>
-                <button class=".btn">2</button>
-                <button class=".btn">3</button>
-                <button class=".btn">-</button>
-
-            </div> -->
-
-            <!-- <div class="buttons" id="fourthRow">
-                <button class=".btn">+ -</button>
-                <button class=".btn">0</button>
-                <button class=".btn">.</button>
-                <button class=".btn">=</button>
-
-            </div> -->
-        </div>
-    </div>
+            </div> <!-- end of firstRow -->
+        </div> <!-- end of .calculator -->
+    </div> <!-- end of .grid -->
 
     <script src="/src/index.js"></script>
 </body>
