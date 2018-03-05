@@ -85,3 +85,10 @@ function doTheMath(){
     // loop through the string and use RegEx to push whole values plus signs to numbersArray
     currentDisplay.innerHTML += `<hr> ${temp} <br>`
 }
+
+function backspace() {
+    let currentVal = document.getElementById('visibleNums').innerText;
+    let newValue = currentVal.slice(currentVal.length - 2);
+    console.log(newValue);
+    currentVal.innerText = newValue;
+}
