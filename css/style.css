@@ -3,15 +3,21 @@
 }
 
 .calculator {
+    
     height: 600px;
     width: 400px;
-    background: red;
+    border: 2px solid black;
 }
 
 .display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow: scroll;
     height: 200px;
     width: 300px;
-    background: blue;
+    border: 2px solid blue;
 }
 
 .btn {
