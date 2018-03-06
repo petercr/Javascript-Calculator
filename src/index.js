@@ -93,11 +93,19 @@ function doTheMath(){
 }
 
 function backspace() {
+    // if last key pressed was return, alert button can't be used
     if (justPressedReturn === true){
         alert("Can't use backspace right now");
         return;
     }
+
     let currentVal = document.getElementById('visibleNums').innerText;
+
+    // if no other number has been entered, alert button can't be used    
+    if (currentVal === "0"){
+        alert("Can't use backspace right now");
+        return;
+    }
     let newValue = currentVal.slice(0, currentVal.length - 1);
     console.log(newValue);
     document.getElementById('visibleNums').innerText = newValue;
