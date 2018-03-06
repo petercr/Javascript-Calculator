@@ -1,23 +1,25 @@
 const numbersArray = []; // GLOBAL Array to hold the values for the calculations
 let calcDisplay = '0';
+var justPressedReturn = false;
 
 (function () {
     // get a Node list of all of the buttons
     const buttonList = document.querySelectorAll('button');
     console.dir(buttonList);
 
-    for (let i of buttonList) {
-        console.log(i.id);
-        i.addEventListener('click', function () {
-            console.log('button press');
-        })
-    }
+    // for (let i of buttonList) {
+    //     console.log(i.id);
+    //     i.addEventListener('click', function () {
+    //         console.log('button press');
+    //     })
+    // }
 
 
 })(); // end of self-executing function ()
 
 // function to add the number or sign && new line to the display
 function changeCalc(keyValue) {
+    justPressedReturn = false;
     let currentVal = document.getElementById('visibleNums');
     console.log(currentVal.innerText);
     if (currentVal.innerText == 0) {
@@ -80,15 +82,23 @@ function startOver() {
 }
 
 function doTheMath(){
+    console.log(justPressedReturn);
+    
     let currentDisplay = document.getElementById('visibleNums');
     let temp = eval(currentDisplay.innerText);
     // loop through the string and use RegEx to push whole values plus signs to numbersArray
-    currentDisplay.innerHTML += `<hr> ${temp} <br>`
+    currentDisplay.innerHTML = currentDisplay.innerHTML + `<hr> ${temp} <br>`;
+    justPressedReturn = true;
+    
 }
 
 function backspace() {
+    if (justPressedReturn === true){
+        alert("Can't use backspace right now");
+        return;
+    }
     let currentVal = document.getElementById('visibleNums').innerText;
-    let newValue = currentVal.slice(currentVal.length - 2);
+    let newValue = currentVal.slice(0, currentVal.length - 1);
     console.log(newValue);
-    currentVal.innerText = newValue;
+    document.getElementById('visibleNums').innerText = newValue;
 }
