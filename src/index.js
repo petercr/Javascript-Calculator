@@ -1,6 +1,6 @@
-const numbersArray = []; // GLOBAL Array to hold the values for the calculations
+const numbersAndSignsArray = []; // GLOBAL Array to hold the values for the calculations
 let calcDisplay = '0';
-var justPressedReturn = false;
+let justPressedReturn = false;
 
 (function () {
     // get a Node list of all of the buttons
@@ -82,13 +82,20 @@ function startOver() {
 }
 
 function doTheMath(){
-    console.log(justPressedReturn);
+    // console.log(justPressedReturn);
     
     let currentDisplay = document.getElementById('visibleNums');
+    
+        
     let temp = eval(currentDisplay.innerText);
+    console.log(temp);
     // loop through the string and use RegEx to push whole values plus signs to numbersArray
     currentDisplay.innerHTML = currentDisplay.innerHTML + `<hr> ${temp} <br>`;
+    pushToArray(currentDisplay.innerText);
+    
     justPressedReturn = true;
+    let test = document.getElementById('test')
+    test.innerText += numbersAndSignsArray;
     
 }
 
@@ -109,4 +116,10 @@ function backspace() {
     let newValue = currentVal.slice(0, currentVal.length - 1);
     console.log(newValue);
     document.getElementById('visibleNums').innerText = newValue;
+}
+
+function pushToArray (value) {
+    // take the value from a line and push it to numbersAndSignsArray
+    numbersAndSignsArray.push(value);
+
 }
