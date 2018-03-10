@@ -23,7 +23,7 @@
             <div class="buttons" id="firstRow">
                 <button class=".btn" id="clearAll" onclick="startOver()">AC</button>
                 <button class=".btn" id="backspace" onclick="backspace()" >=></button>
-                <button class=".btn" id="history" >History</button>
+                <button class=".btn" id="history" onclick="showHistoryModal()">History</button>
                 <button class=".btn" id="divide" onclick="changeCalc('/')">/</button>
 
                 <button class=".btn" id="7" onclick="changeCalc(7)">7</button>
@@ -49,7 +49,7 @@
         </div> <!-- end of .calculator -->
         <p id="test"></p>
     </div> <!-- end of .grid -->
-    <script src="/node_modules/tingle.js/src/tingle.css"></script>
+    <script src="/node_modules/tingle.js/src/tingle.js"></script>
     <script src="/src/index.js"></script>
 </body>
 
