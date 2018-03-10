@@ -148,14 +148,18 @@ function pushToArray (value) {
 }
 
 function showHistoryModal () {
+
+    // historyModal.addFooterBtn('Exit', 'tingle-btn ', function () {
+    //     historyModal.close();
+    // });
+
     historyModal.setContent(`
     <h1>Here's your calc history</h1>
     <hr>
     ${numbersAndSignsArray}
     `);
-    // historyModal.addFooterBtn('Exit', 'tingle-btn ', function () {
-    //     historyModal.close();
-    // });
+
+    
 
     historyModal.open();
 
