@@ -2,6 +2,29 @@ const numbersAndSignsArray = []; // GLOBAL Array to hold the values for the calc
 let calcDisplay = '0';
 let justPressedReturn = false;
 
+
+// instantiate new tingle.js modal. Check out https://robinparisi.github.io/tingle/ for more info
+var historyModal = new tingle.modal({
+    footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Close",
+    cssClass: ['custom-class-1', 'custom-class-2'],
+    onOpen: function() {
+        console.log('modal open');
+    },
+    onClose: function() {
+        console.log('modal closed');
+    },
+    beforeClose: function() {
+        // here's goes some logic
+        // e.g. save content before closing the modal
+        return true; // close the modal
+        return false; // nothing happens
+    }
+});
+
+
 (function () {
     // get a Node list of all of the buttons
     const buttonList = document.querySelectorAll('button');
@@ -83,10 +106,10 @@ function startOver() {
 
 function doTheMath(){
     // console.log(justPressedReturn);
-    
+    // get the visible numbers from the calculator
     let currentDisplay = document.getElementById('visibleNums');
     
-        
+    // set variable to hold the evaluated answer to the math problem
     let temp = eval(currentDisplay.innerText);
     console.log(temp);
     // loop through the string and use RegEx to push whole values plus signs to numbersArray
@@ -121,5 +144,19 @@ function backspace() {
 function pushToArray (value) {
     // take the value from a line and push it to numbersAndSignsArray
     numbersAndSignsArray.push(value);
+
+}
+
+function showHistoryModal () {
+    historyModal.setContent(`
+    <h1>Here's your calc history</h1>
+    <hr>
+    ${numbersAndSignsArray}
+    `);
+    // historyModal.addFooterBtn('Exit', 'tingle-btn ', function () {
+    //     historyModal.close();
+    // });
+
+    historyModal.open();
 
 }
