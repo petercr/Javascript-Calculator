@@ -118,7 +118,15 @@ function doTheMath(){
     
     justPressedReturn = true;
     let test = document.getElementById('test')
-    test.innerText += numbersAndSignsArray;
+    for (let i = 0; i < numbersAndSignsArray.length; i++){
+        if ((i + 1) % 3 === 0){
+            test.innerText += ` + ${numbersAndSignsArray[i]}`;
+        }
+        else {
+    test.innerText += numbersAndSignsArray[i];            
+        }
+        
+    }
     
 }
 
