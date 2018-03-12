@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/petercr/Javascript-Calculator#readme",
   "dependencies": {
+    "eslint": "^4.18.2",
     "tingle.js": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
   }
 }
