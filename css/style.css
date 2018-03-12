@@ -14,20 +14,27 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    overflow: scroll;
+    overflow: auto;
     height: 200px;
     width: 300px;
     border: 2px solid blue;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 .btns {
-    height: 50px;
+    height: 150px;
     width: 50px;
+    
 }
 
 .buttons {
     padding-top: 100px;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#firstRow {
+    height: 250px;  
+    
 }
