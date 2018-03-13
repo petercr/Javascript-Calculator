@@ -118,16 +118,20 @@ function doTheMath() {
   // loop through the string and use RegEx to push whole values plus signs to numbersArray
   currentDisplay.innerHTML += `<hr> ${temp} <br>`;
   pushToArray(currentDisplay.innerText);
-
+  let calcView = document.getElementById('screen');
+  calcView.scrollTop = calcView.scrollHeight;
   justPressedReturn = true;
-  const test = document.getElementById('test');
-  for (let i = 0; i < numbersAndSignsArray.length; i++) {
-    if ((i + 1) % 3 === 0) {
-      test.innerText += ` + ${numbersAndSignsArray[i]}`;
-    } else {
-      test.innerText += numbersAndSignsArray[i];
-    }
-  }
+
+
+  // put in a test <p> to see how the history would look on modal
+  // const test = document.getElementById('test');
+  // for (let i = 0; i < numbersAndSignsArray.length; i++) {
+  //   if ((i + 1) % 3 === 0) {
+  //     test.innerText += ` + ${numbersAndSignsArray[i]}`;
+  //   } else {
+  //     test.innerText += numbersAndSignsArray[i];
+  //   }
+  // }
 }
 
 function backspace() {
