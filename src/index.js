@@ -116,7 +116,7 @@ function doTheMath() {
   const temp = eval(currentDisplay.innerText);
   console.log(temp);
   // loop through the string and use RegEx to push whole values plus signs to numbersArray
-  currentDisplay.innerHTML += `<hr> ${temp} <br>`;
+  currentDisplay.innerHTML += `<hr> ${temp} <hr>`;
   pushToArray(currentDisplay.innerText);
   const calcView = document.getElementById('screen');
   calcView.scrollTop = calcView.scrollHeight;
@@ -163,10 +163,12 @@ function showHistoryModal() {
   //     historyModal.close();
   // });
 
+  let currentHistory = document.getElementById("visibleNums").innerHTML;
+  console.log(currentHistory);
   historyModal.setContent(`
-    <h1>Sorry doesn't totally work yet 😲</h1>
+    <h1>Here's your history 😲</h1>
     <hr>
-    ${numbersAndSignsArray}
+    <p>${currentHistory}</p>
     `);
 
 
