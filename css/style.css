@@ -6,8 +6,9 @@
     /* display : flex;
     flex-direction: column;
     
-    align-items: stre h; */
-    margin-left: 30%;
+    align-items: ; */
+    margin-left: 20%;
+    margin-top: 5%;
     height: 60%;
     width: 80%;
     max-width: 500px;
@@ -25,10 +26,15 @@
     align-items: flex-end;
     overflow: auto;
     height: 200px;
-    width: 300px;
+    width: 65%;
     border: 2px solid blue;
-    margin-left: 20%;
+    margin-left: 18%;
     margin-top: 10%;
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     box-shadow: inset 2px 2px 4px 5px #aaa; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: inset 2px 2px 4px 5px #aaa; /* FF3.5 - 3.6 */
     box-shadow: inset 2px 2px 4px 5px #aaa; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
@@ -45,7 +51,7 @@
     padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-size: large;
+    font-size: 24px !important;
 }
 
 #firstRow {
