@@ -117,7 +117,7 @@ function doTheMath() {
   console.log(answer);
   // loop through the string and use RegEx to push whole values plus signs to numbersArray
   currentDisplay.innerHTML += `<hr> <line x1="20" y1="100" x2="100" y2="20"
-  stroke-width="2" stroke="black"/>${answer} `;
+  stroke-width="2" stroke="black"/> ${answer} `;
   pushToArray(currentDisplay.innerText);
   const calcView = document.getElementById('screen');
   calcView.scrollTop = calcView.scrollHeight;
