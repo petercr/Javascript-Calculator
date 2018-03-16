@@ -113,10 +113,11 @@ function doTheMath() {
   const currentDisplay = document.getElementById('visibleNums');
 
   // set variable to hold the evaluated answer to the math problem
-  const temp = eval(currentDisplay.innerText);
-  console.log(temp);
+  const answer  = eval(currentDisplay.innerText);
+  console.log(answer);
   // loop through the string and use RegEx to push whole values plus signs to numbersArray
-  currentDisplay.innerHTML += `<hr> ${temp} <hr>`;
+  currentDisplay.innerHTML += `<hr> <line x1="20" y1="100" x2="100" y2="20"
+  stroke-width="2" stroke="black"/>${answer} `;
   pushToArray(currentDisplay.innerText);
   const calcView = document.getElementById('screen');
   calcView.scrollTop = calcView.scrollHeight;
