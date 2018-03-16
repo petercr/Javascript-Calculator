@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Mina');
+
 .grid {
     color: rgb(46, 187, 206);
 }
@@ -47,8 +49,18 @@
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 28px;
+    font-family: 'Mina', sans-serif;
+
     box-shadow: 2px 2px white;
+    /* clouds gradient from https://uigrandents.com/#Clouds */
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .CalcButtons {
@@ -56,6 +68,14 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     font-size: 42px !important;
+}
+
+iframe {
+    padding-top: 15px;
+    /* align-content: center; */
+    
+    height: 50px;
+    width: 50px;
 }
 
 #firstRow {
@@ -67,4 +87,8 @@ button {
     padding-right: 20px;
     font-size: 42px;
     
+}
+
+.tingle-modal p {
+    font-size: 24px;
 }
