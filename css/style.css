@@ -43,15 +43,19 @@
 .btns {
     height: 150px;
     width: 50px;
-    font-size: 24px;
-    
+        
 }
 
-.buttons {
+button {
+    font-size: 28px;
+    box-shadow: 2px 2px white;
+}
+
+.CalcButtons {
     padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-size: 24px !important;
+    font-size: 42px !important;
 }
 
 #firstRow {
@@ -61,6 +65,6 @@
 
 #visibleNums {
     padding-right: 20px;
-    font-size: 32px !important;
+    font-size: 42px;
     
 }
