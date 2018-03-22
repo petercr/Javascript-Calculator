@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Mina');
 
+
+/* Selected by class elements */
 .grid {
     color: rgb(46, 187, 206);
 }
@@ -95,3 +97,21 @@ iframe {
     
 }
 
+/* Media Queries for different size screens */ 
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%;
+        margin-left: 5% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .display {
+        height: 20%;
+    }
+
+    .calculator {
+        margin-top: 10px;
+    }
+}
