@@ -5,15 +5,12 @@
 }
 
 .calculator {
-    /* display : flex;
-    flex-direction: column;
     
-    align-items: ; */
     margin-left: 20%;
     margin-top: 5%;
-    height: 60%;
+    height: 80%;
     width: 80%;
-    max-width: 500px;
+    max-width: 800px;
     border: 2px solid black;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
@@ -27,10 +24,10 @@
     justify-content: flex-end;
     align-items: flex-end;
     overflow: auto;
-    height: 200px;
+    height: 40%;
     width: 65%;
     border: 2px solid black;
-    margin-left: 18%;
+    margin-left: 20%;
     margin-top: 10%;
     background: #283048;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
@@ -48,6 +45,18 @@
         
 }
 
+.CalcButtons {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 42px !important;
+}
+
+.tingle-modal p {
+    font-size: 24px;
+}
+
+/* Global artibutes by element */
 button {
     display: flex;
     justify-content: center;
@@ -63,12 +72,7 @@ button {
 
 }
 
-.CalcButtons {
-    padding-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-size: 42px !important;
-}
+
 
 iframe {
     padding-top: 15px;
@@ -78,8 +82,10 @@ iframe {
     width: 50px;
 }
 
+
+/* Section where elements selected by ID */
 #firstRow {
-    height: 250px;  
+    height: 20%;  
     
 }
 
@@ -89,6 +95,3 @@ iframe {
     
 }
 
-.tingle-modal p {
-    font-size: 24px;
-}
