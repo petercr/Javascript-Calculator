@@ -114,4 +114,14 @@ iframe {
     .calculator {
         margin-top: 10px;
     }
+
+    button {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 35px;
+        padding-top: 2px;
+        padding-left: 8px;
+    }
 }
