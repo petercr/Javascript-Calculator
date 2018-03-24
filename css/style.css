@@ -58,6 +58,10 @@
     font-size: 24px;
 }
 
+.icons {
+    border-radius: 50%;
+}
+
 /* Global artibutes by element */
 button {
     display: flex;
@@ -84,6 +88,16 @@ iframe {
     width: 50px;
 }
 
+img {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 37%;
+    
+    
+}
+
 
 /* Section where elements selected by ID */
 #firstRow {
@@ -96,6 +110,14 @@ iframe {
     font-size: 42px;
     
 }
+
+#firstRowIcons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 10%;
+}
+
 
 /* Media Queries for different size screens */ 
 @media (max-width: 768px) {
@@ -115,6 +137,16 @@ iframe {
         margin-top: 10px;
     }
 
+    .icons {
+        height: 30px;
+        width: 30px;
+        border-radius: 20%;
+    }
+
+    .CalcButtons {
+        padding-top: 25%;
+    }
+
     button {
         font-size: 16px;
     }
@@ -123,5 +155,16 @@ iframe {
         height: 35px;
         padding-top: 2px;
         padding-left: 8px;
+    }
+
+    img {
+        height: 25px;
+        width: 25px;
+        border-radius: 10%;
+        /* padding: 10px; */
+    }
+
+    #firstRowIcons {
+        margin-top: 5px;
     }
 }
