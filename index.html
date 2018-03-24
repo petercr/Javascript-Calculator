@@ -19,15 +19,31 @@
             <div class="display" id="screen">
                 <p id="visibleNums">0</p>
             </div>
+            <div id="firstRowIcons" class="SocialMediaIcons">
+                <button class="icons" onclick="window.open('https://www.freecodecamp.org/petercr')">
+                    <img src="/img/freecodecamp.svg" alt="Free Code Camp" id="freeCodeCamp" >
+                </button>
+                <button class="icons" onclick="window.open('https://github.com/petercr/Javascript-Calculator')">
+                    <img src="/img/github.svg" alt="github" id="github" >
+                </button>
+                <button class="icons" onclick="window.open('https://www.twiter.com/PeteCapeCod')">
+                    <img src="/img/twitter.svg" alt="Twitter" id="twitter">
+                </button>
+                <button class="icons" onclick="window.open('https://www.linkedin.com/in/peter-cruckshank-25022a141/')">
+                    <img src="/img/linkedin.svg" alt="LinkedIn" id="linkedin" >
+                </button>
+            </div>
 
             <div class="CalcButtons" id="firstRow">
                 <button class=".btns" id="clearAll" onclick="startOver()">AC</button>
-                <button class=".btns" id="backspace" onclick="backspace()" ><iframe src="/img/if_backspace_83227.png" frameborder="0"></iframe></button>
+                <button class=".btns" id="backspace" onclick="backspace()">
+                    <iframe src="/img/if_backspace_83227.png" frameborder="0"></iframe>
+                </button>
                 <button class=".btns" id="history" onclick="showHistoryModal()">History</button>
                 <button class=".btns" id="divide" onclick="changeCalc('/')">/</button>
 
                 <button class=".btns" id="7" onclick="changeCalc(7)">7</button>
-                <button class=".btns" id="8" onclick="changeCalc(8)" >8</button>
+                <button class=".btns" id="8" onclick="changeCalc(8)">8</button>
                 <button class=".btns" id="9" onclick="changeCalc(9)">9</button>
                 <button class=".btns" id="multiply" onclick="changeCalc('*')">X</button>
                 <button class=".btns" id="4" onclick="changeCalc(4)">4</button>
@@ -36,18 +52,21 @@
                 <button class=".btns" id="plus" onclick="changeCalc('+')">+</button>
                 <button class=".btns" id="1" onclick="changeCalc(1)">1</button>
                 <button class=".btns" id="2" onclick="changeCalc(2)">2</button>
-                <button class=".btns"  id="3" onclick="changeCalc(3)">3</button>
-                <button class=".btns" id="minus" onclick="changeCalc('-')" >-</button>
-                <button class=".btns" id="invertValue" >+ -</button>
-                <button class=".btns" id="0" onclick="changeCalc(0)" >0</button>
-                <button class=".btns" id="decimalPlace" onclick="changeCalc('.')" >.</button>
-                <button class=".btns" id="equalButton" onclick="doTheMath()" >=</button>
+                <button class=".btns" id="3" onclick="changeCalc(3)">3</button>
+                <button class=".btns" id="minus" onclick="changeCalc('-')">-</button>
+                <button class=".btns" id="invertValue">+ -</button>
+                <button class=".btns" id="0" onclick="changeCalc(0)">0</button>
+                <button class=".btns" id="decimalPlace" onclick="changeCalc('.')">.</button>
+                <button class=".btns" id="equalButton" onclick="doTheMath()">=</button>
 
 
 
-            </div> <!-- end of firstRow -->
-        </div> <!-- end of .calculator -->
-    </div> <!-- end of .grid -->
+            </div>
+            <!-- end of firstRow -->
+        </div>
+        <!-- end of .calculator -->
+    </div>
+    <!-- end of .grid -->
     <script src="/node_modules/tingle.js/src/tingle.js"></script>
     <script src="/src/index.js"></script>
 </body>
