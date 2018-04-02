@@ -2,6 +2,9 @@ const numbersAndSignsArray = []; // GLOBAL Array to hold the values for the calc
 const calcDisplay = '0';
 let justPressedReturn = false;
 
+document.addEventListener('keypress', function (e) {
+  console.log(e.char);
+});
 
 // instantiate new tingle.js modal. Check out https://robinparisi.github.io/tingle/ for more info
 const historyModal = new tingle.modal({
@@ -27,15 +30,10 @@ const historyModal = new tingle.modal({
 
 (function () {
   // get a Node list of all of the buttons
-  const buttonList = document.querySelectorAll('button');
-  console.dir(buttonList);
+  // const buttonList = document.querySelectorAll('button');
+  // console.dir(buttonList);
 
-  // for (let i of buttonList) {
-  //     console.log(i.id);
-  //     i.addEventListener('click', function () {
-  //         console.log('button press');
-  //     })
-  // }
+
 }()); // end of self-executing function ()
 
 // function to add the number or sign && new line to the display
