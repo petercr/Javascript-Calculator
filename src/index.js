@@ -1,6 +1,7 @@
 const numbersAndSignsArray = []; // GLOBAL Array to hold the values for the calculations
 const calcDisplay = "0";
 let justPressedReturn = false;
+let arrIndex = 0;
 
 document.addEventListener("keypress", function (e) {
     console.log(e.char);
@@ -47,6 +48,7 @@ function changeCalc(keyValue) {
     switch (keyValue) {
     case (1):
         currentVal.innerText += "1";
+        numbersAndSignsArray.push(1);
         break;
     case (2):
         currentVal.innerText += "2";
@@ -154,7 +156,7 @@ function backspace() {
 
 function pushToArray(value) {
     // take the value from a line and push it to numbersAndSignsArray
-    numbersAndSignsArray.push(value);
+    // numbersAndSignsArray.push(value);
 }
 
 function showHistoryModal() {
