@@ -113,7 +113,7 @@ function doTheMath() {
     const currentDisplay = document.getElementById("visibleNums");
 
     // set variable to hold the evaluated answer to the math problem
-    const answer  = eval(currentDisplay.innerText);
+    const answer  = Number(currentDisplay.innerText);
     console.log(answer);
     // loop through the string and use RegEx to push whole values plus signs to numbersArray
     currentDisplay.innerHTML += `<hr> <line x1="20" y1="100" x2="100" y2="20"
