@@ -4,6 +4,8 @@
 /* Selected by class elements */
 .grid {
     color: rgb(46, 187, 206);
+    height: 100vh;
+    width: 100vw;
 }
 
 .calculator {
@@ -51,6 +53,7 @@
     padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
     font-size: 42px !important;
 }
 
